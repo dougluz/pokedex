@@ -4,7 +4,7 @@ const generatePokemonPromises = () => Array(150).fill().map((_, index) =>
   fetch(getPokemonUrl(index + 1)).then(response => response.json()))
 
 const generateHTML = pokemons => {
-  return pokemons.reduce((accumulator, { name, id, types}) => {
+  return pokemons.reduce((accumulator, { name, id, types }) => {
     console.log(name)
     const elementTypes = types.map(typeInfo => typeInfo.type.name)
     
